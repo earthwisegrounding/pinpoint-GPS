@@ -2,8 +2,8 @@
 
 A phone-location prank with a staged satellite zoom from Washington to Bremerton, followed by a customizable media reveal. No actual phone tracking or phone-number collection.
 
-- Site: https://earthwisegrounding.github.io/pinpoint-prank/
-- Private admin entry: https://earthwisegrounding.github.io/pinpoint-prank/admin/
+- Site: https://earthwisegrounding.github.io/pinpoint-GPS/
+- Private admin entry: https://earthwisegrounding.github.io/pinpoint-GPS/admin/
 - **[Admin and Supabase setup](SETUP.md)**
 
 The default reveal works without Supabase. Secure login and shared uploads require the one-time setup above. No credentials are embedded in this repository.

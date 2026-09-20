@@ -33,11 +33,11 @@ window.PINPOINT_CONFIG = {
 
 Commit the change to the `main` branch. GitHub Actions automatically republishes the website. These two values are designed to be public; database and storage policies enforce authorization.
 
-Set the Supabase Auth **Site URL** to `https://earthwisegrounding.github.io/pinpoint-prank/`.
+Set the Supabase Auth **Site URL** to `https://earthwisegrounding.github.io/pinpoint-GPS/`.
 
 ## 5. Sign in and upload
 
-Visit **https://earthwisegrounding.github.io/pinpoint-prank/admin/**. Sign in with your admin email and password. Choose your media, preview it, then click **Publish reveal**. You can also restore the included default video. No link to the admin page appears on the public page.
+Visit **https://earthwisegrounding.github.io/pinpoint-GPS/admin/**. Sign in with your admin email and password. Choose your media, preview it, then click **Publish reveal**. You can also restore the included default video. No link to the admin page appears on the public page.
 
 Supported: JPG, PNG, GIF, WebP, MP4, WebM, MP3, WAV, and OGG, up to 50 MB. For best phone compatibility, use MP4 with H.264 video and AAC audio. Convert iPhone MOV/HEIC files before uploading. Videos try to play with sound, then fall back to muted playback when browser autoplay rules require it; native playback controls remain available.
 
