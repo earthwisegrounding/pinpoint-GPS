@@ -36,9 +36,15 @@ async function start(raw) {
   if(running) return {started:false,reason:'A sequence is already running.'};
   let digits=raw.replace(/\D/g,'');if(digits.length===11&&digits[0]==='1')digits=digits.slice(1);
   if(digits.length!==10 || !/^[2-9]\d{2}[2-9]\d{6}$/.test(digits)){ $('phone-error').textContent='Enter a valid 10-digit US phone number.';return {started:false,reason:'Invalid US number'}; }
+  $('phone').blur();
   $('phone-error').textContent='';running=true;$('locate').disabled=true;$('phone').disabled=true;$('locate').firstChild.textContent='Locating phone ';
   document.body.classList.add('scanning');$('region-type').textContent=['360','564'].includes(digits.slice(0,3))?'REGIONAL MATCH / WESTERN WASHINGTON':'SEARCH REGION / WASHINGTON';
-  if(matchMedia('(max-width: 720px)').matches) document.querySelector('.map-panel').scrollIntoView({behavior:reducedMotion?'instant':'smooth',block:'start'});
+  if(matchMedia('(max-width: 720px), (pointer: coarse)').matches) {
+    // Let the on-screen keyboard close before measuring and scrolling the map.
+    await pause(400);
+    map?.invalidateSize({pan:false});
+    document.querySelector('.map-panel').scrollIntoView({behavior:reducedMotion?'instant':'smooth',block:'start'});
+  }
   await revealReady;
   revealMedia=mediaElement(chosen.url,chosen.mime);revealMedia.addEventListener('error',fallback,{once:true});$('reveal-media').replaceChildren(revealMedia);
   // The number is used only for the local area-code label, never sent or stored.
