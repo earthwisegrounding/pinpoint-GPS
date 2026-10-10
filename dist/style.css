@@ -3,3 +3,4 @@
 
 .imagery-credit{position:absolute;bottom:0;right:0;left:0;z-index:5;padding:3px 8px;background:#0b1112c9;color:#c4d0ca;font:10px/1.3 sans-serif;text-align:right}.imagery-credit a{text-decoration:underline}
 @media(max-width:720px){.target-label{top:calc(50% - 125px)}}
+footer{flex-wrap:wrap}.site-credit{order:10;flex-basis:100%;margin:4px 0 0;padding-top:18px;border-top:1px solid var(--line);text-align:center;letter-spacing:.6px}.site-credit{font-size:10px}.site-credit a{display:inline-block;color:#778787;transition:color .2s}.site-credit img{display:inline-block;vertical-align:middle;width:53px;height:40px;margin-right:10px}.site-credit strong{color:#aab6b5;font-weight:600;transition:color .2s}.site-credit a:hover,.site-credit a:focus-visible{color:#a0adaf}.site-credit a:hover strong,.site-credit a:focus-visible strong{color:var(--lime)}@media(max-width:720px){.site-credit{padding-top:14px;margin-top:2px}}
